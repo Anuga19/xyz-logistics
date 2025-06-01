@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.css'; // Tailwind CSS
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Amplify } from 'aws-amplify';
+import awsConfig from './aws-exports';
+
+import AppRoutes from './Routes'; // Your existing routes (client/admin dashboards)
+
+import AuthPage from './routes/AuthPage';
+
+
+Amplify.configure(awsConfig);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-50 text-gray-800 font-sans antialiased">
+      <BrowserRouter>
+        <Routes>
+          {/* Public Sign In/Sign Up Page */}
+          <Route path="/auth" element={<AuthPage />} />
+
+          {/* Protected Routes (your existing AppRoutes) */}
+          <Route
+            path="/*"
+            element={<AppRoutes />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

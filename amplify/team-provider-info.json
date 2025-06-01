@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-xyzlogistics-dev-23a30-authRole",
+      "UnauthRoleArn": "arn:aws:iam::762233746238:role/amplify-xyzlogistics-dev-23a30-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::762233746238:role/amplify-xyzlogistics-dev-23a30-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-xyzlogistics-dev-23a30-deployment",
+      "UnauthRoleName": "amplify-xyzlogistics-dev-23a30-unauthRole",
+      "StackName": "amplify-xyzlogistics-dev-23a30",
+      "StackId": "arn:aws:cloudformation:us-east-1:762233746238:stack/amplify-xyzlogistics-dev-23a30/582ec8c0-358c-11f0-8504-0ef26697d685",
+      "AmplifyAppId": "d3efik1nlerv8"
+    },
+    "categories": {
+      "auth": {
+        "xyzlogisticsa49d6479": {}
+      }
+    }
+  }
+}
